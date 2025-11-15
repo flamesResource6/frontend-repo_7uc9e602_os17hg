@@ -1,28 +1,27 @@
-import { useState } from 'react'
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import { PopularCategories, FeaturedSlider, NewArrivals, DealBanner, WhyDifferent, Testimonials, Footer } from './components/Sections';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
+    <div className="min-h-screen bg-[#FFF7EC]">
+      <Navbar />
+      <Hero />
+      <PopularCategories />
+      <FeaturedSlider />
+      <NewArrivals />
+      <DealBanner />
+      <WhyDifferent />
+      <Testimonials />
+      <Footer />
+
+      {/* Sticky Order Now bar on mobile */}
+      <div className="fixed bottom-4 left-0 right-0 px-4 md:hidden">
+        <a href="#menu" className="block mx-auto max-w-md text-center px-6 py-3 rounded-2xl text-white font-semibold shadow-[0_12px_40px_rgba(255,152,33,0.45)] bg-gradient-to-br from-[#FFC83A] to-[#FF9E33]">Order Now</a>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
