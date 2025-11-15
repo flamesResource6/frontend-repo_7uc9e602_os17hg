@@ -3,7 +3,17 @@
 > vite
 
 
-  VITE v5.4.20  ready in 249 ms
+  VITE v5.4.20  ready in 223 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.20.0.217:3000/
+7:43:50 AM [vite] warning: The character ">" is not valid inside a JSX element
+107|            <div className="absolute -right-3 bottom-6 md:-right-6 md:bottom-8">
+108|              <div className="rounded-2xl bg-white/10 border border-white/10 text-white/90 px-3 py-2 text-sm backdrop-blur">
+109|                Free Delivery > $20
+   |                              ^
+110|              </div>
+111|            </div>
+
+  Plugin: vite:esbuild
+  File: /home/workspace/src/components/Hero.jsx
